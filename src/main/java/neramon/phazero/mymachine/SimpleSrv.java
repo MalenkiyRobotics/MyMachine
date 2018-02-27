@@ -11,9 +11,9 @@ import com.sun.net.httpserver.HttpServer;
 public class SimpleSrv {
 
     public static void main(String[] args) throws Exception {
-        HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
-        server.createContext("/test", new MyHandler());
-        server.setExecutor(null); // creates a default executor
+        HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
+        server.createContext("/testme", new MyHandler());
+        server.setExecutor(null);
         server.start();
     }
 
